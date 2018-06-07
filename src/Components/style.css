@@ -1,0 +1,16 @@
+table,tr,th,td{
+    text-align: center
+}
+th,td{
+    
+    min-width:150px;
+}
+
+input{
+    width:150px;
+    border: 1px solid #fff;
+}
+
+tr,th,td{
+    border: 1px solid #ddd;
+}
