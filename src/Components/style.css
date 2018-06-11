@@ -11,6 +11,8 @@ input{
     border: 1px solid #fff;
 }
 
-tr,th,td{
-    border: 1px solid #ddd;
+
+
+.table > tbody > tr > td.active{
+    border: 1px solid rgb(62, 135, 243);
 }

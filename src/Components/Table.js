@@ -9,17 +9,18 @@ class Table extends Component {
     headings:['0','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
   }
   render() {
+    
    let thHeadings=this.props.headings.map(heading=>{
-    return <th key={heading}>{heading}</th>
+    return <th key={heading} >{heading}</th>
    })
 
    const rows=[];
 
    for(let x=1;x<=20;x++){
      rows.push(
-      <tr>
-       <Rows key={x} row={x} columns={this.props.headings}/>
-      </tr>
+      
+       <Rows key={x} row={x} columns={this.props.headings} dataList={this.props.dataList}/>
+      
       
      )
 
@@ -28,14 +29,15 @@ class Table extends Component {
     return (
       <div className='container' >
         <table className='table table-bordered'>
+       <thead>
         <tr>
-          <thead>
           {thHeadings}
-          </thead>
-          </tr>
-         <tbody>
+         </tr>
+         </thead>
+          
+        <tbody>
           {rows}
-          </tbody>
+         </tbody>
           
         </table>
       </div>
